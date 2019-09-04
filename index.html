@@ -18,29 +18,42 @@
     }
 
     // Regular
-
+    console.log('Poop');
     // Interpolated
-
+    console.log('This is a %s string', 'poop');
+    const poop = 'poop'
+    console.log(`This is also a ${poop} string`);
     // Styled
-
+    console.log('%c This is some styled text', 'background: yellow');
     // warning!
-
+    console.warn('This is a warning');
     // Error :|
-
+    console.error('This displays an error');
     // Info
-
+    console.info('Bella is best');
     // Testing
-
+    console.assert(1 === 2, 'Something is wrong');
     // clearing
-
+    console.clear();
+    //This will clear the console
     // Viewing DOM Elements
-
+    console.dir(p);
     // Grouping together
-
+    dogs.forEach(dog => {
+        console.group(`${dog.name}`);
+        console.log(`This is ${dogs.name}`);
+        console.log(`${dogs.name} is ${dogs.age} years old`);
+        console.groupEnd(`${dog.name}`);
+    });
     // counting
-
+    console.count('Dylan');
     // timing
-
+    console.time('fetching data');
+    fetch('https://api.github.com/users/doletm')
+    .then(data => data.json())
+    .then(data => {
+        console.timeEnd('fetching data');
+    })
   </script>
 </body>
 </html>
